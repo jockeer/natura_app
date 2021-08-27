@@ -20,16 +20,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: 'welcome',
       routes: getRoutes(),
-      theme: ThemeData.light().copyWith(
-
+      theme: ThemeData(
+        fontFamily: 'Helvetica',
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
-            brightness: Brightness.dark,
-            backgroundColor: Colors.white,
-            iconTheme: IconThemeData(color: Colors.black),
-            elevation: 0
-          ),
-
+          brightness: Brightness.dark,
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
+          elevation: 0
+        ),
       ),
     );
   }

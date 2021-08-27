@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:natura/utils/constantes.dart';
+import 'package:natura/widgets/widgets.dart';
 
 class RegisterPage1Screen extends StatelessWidget {
 
@@ -17,7 +18,7 @@ class RegisterPage1Screen extends StatelessWidget {
         body: SafeArea(
           child: ListView(
             children: [
-              FlutterLogo(size: 100,),
+              Logo(),
               _Formulario( formState: formState )
             ],
           )

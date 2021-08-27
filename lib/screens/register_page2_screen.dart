@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:natura/utils/constantes.dart';
+import 'package:natura/widgets/widgets.dart';
 
 class RegisterPage2Screen extends StatelessWidget {
   final GlobalKey<FormState> formState = GlobalKey<FormState>();
@@ -17,7 +18,8 @@ class RegisterPage2Screen extends StatelessWidget {
           child: ListView(
             children: [
               _Info(),
-              _Formulario( formState: formState )
+              _Formulario( formState: formState ),
+              Logo()
             ],
           ),
         ),

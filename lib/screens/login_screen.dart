@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:natura/utils/constantes.dart';
+import 'package:natura/widgets/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
 
@@ -17,7 +18,8 @@ class LoginScreen extends StatelessWidget {
         body: SafeArea(
           child: ListView(
             children: [
-              FlutterLogo(size: 100,),
+              SizedBox(height: 50,),
+              Logo(),
               _Formulario( formState: formState )
             ],
           ),
@@ -54,7 +56,7 @@ class _Formulario extends StatelessWidget {
               style: estilos.buttonStyle(),
               child: estilos.buttonChild(texto: 'siguiente'),
               onPressed: (){
-                Navigator.pushNamed(context, 'register_2');
+                Navigator.pushNamed(context, 'home');
               },
             ),
             SizedBox(height: 20,),

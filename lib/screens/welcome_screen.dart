@@ -54,21 +54,8 @@ class _Carousel extends StatelessWidget {
         scrollDirection: Axis.horizontal
       ),
       items: [
-        Container(
-          width: size.width,
-          height: size.height,
-          color: Colors.blue,
-        ),
-        Container(
-          width: size.width,
-          height: size.height,
-          color: Colors.red,
-        ),
-        Container(
-          width: size.width,
-          height: size.height,
-          color: Colors.green,
-        ),
+        Image(image: AssetImage('assets/fondos/fondo1.png'), fit: BoxFit.cover, width: size.width,height: size.height,),
+        Image(image: AssetImage('assets/fondos/fondo2.png'), fit: BoxFit.cover, width: size.width,height: size.height,),
       ],
     );
   }

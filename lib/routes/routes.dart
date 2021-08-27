@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:natura/screens/home_screen.dart';
 import 'package:natura/screens/login_screen.dart';
 import 'package:natura/screens/register_page1_screen.dart';
 import 'package:natura/screens/register_page2_screen.dart';
@@ -10,5 +11,6 @@ Map<String, WidgetBuilder> getRoutes(){
     'register_1' :( _ ) => RegisterPage1Screen(),
     'register_2' :( _ ) => RegisterPage2Screen(),
     'login' :( _ ) => LoginScreen(),
+    'home' :( _ ) => HomeScreen(),
   };
 }
