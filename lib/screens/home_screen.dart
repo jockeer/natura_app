@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Image(image: AssetImage('assets/img/banner1.png')),
             _Puntos(),
-            _Logros(),
+            Expanded(child: _Logros()),
             _Ranking(),
             SizedBox(height: 10,),
             
@@ -75,8 +75,7 @@ class _Progreso extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Expanded(
-      child: Container(
+    return Container(
         color: ColoresApp().naranja,
         child: Column(
           children: [
@@ -104,11 +103,11 @@ class _Progreso extends StatelessWidget {
               style: estilos.buttonStyle(blanco: true),
               child: estilos.buttonChild(texto: 'Canjea tu pasaje',blanco: true),
               onPressed: null,
-            )
+            ),
+            SizedBox(height: 10,),
           ],
         ),
-      ),
-    );
+      );
   }
 }
 
@@ -127,8 +126,8 @@ class _Logros extends StatelessWidget {
         ),
         CarouselSlider(
           options: CarouselOptions(
-            height: size.height*0.10,
-            viewportFraction: 0.3,
+            height:  size.height*0.13,
+            viewportFraction: 0.5,
             enableInfiniteScroll: false,
             initialPage: 1,
             disableCenter: true,
@@ -161,12 +160,12 @@ class _Logros extends StatelessWidget {
 }
 
 class _Puntos extends StatelessWidget {
-  final puntos = ['1','2','4','2','2'];
+  final puntos = ['1','2','4','2','4'];
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      height: size.height*0.25,
+      height: size.height*0.26,
       width: double.infinity,
       color: Colors.black,
       child: Container(
@@ -190,13 +189,13 @@ class _Puntos extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: puntos.map((e){
                 return Container(
-                  height: size.height*0.15,
-                  width: size.width*0.15,
+                  height: size.height*0.16,
+                  width: size.width*0.14,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage('assets/img/fondoNumeros.png'), fit: BoxFit.cover)
+                    image: DecorationImage(image: AssetImage('assets/img/tablero.png'), fit: BoxFit.fill)
                   ),
-                  child: Text(e, style: TextStyle( fontWeight: FontWeight.bold, color: Colors.white, fontSize: size.width*0.11),),
+                  child: Text(e, style: TextStyle( fontWeight: FontWeight.bold, color: Colors.white, fontSize: size.width*0.15),),
 
                 );
               }).toList(),
